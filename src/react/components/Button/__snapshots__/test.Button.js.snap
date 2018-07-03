@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button else should 1`] = `""`;
+
+exports[`Button no should 1`] = `
+<div
+  className="Button"
+>
+  <WithStyles(Button)
+    id="no"
+    style={
+      Object {
+        "background": "#FF1744",
+        "borderRadius": "5px",
+        "color": "white",
+      }
+    }
+    variant="raised"
+  >
+    No
+  </WithStyles(Button)>
+</div>
+`;
+
+exports[`Button yes should 1`] = `
+<div
+  className="Button"
+>
+  <WithStyles(Button)
+    id="yes"
+    style={
+      Object {
+        "background": "#03A9F4",
+        "borderRadius": "5px",
+        "color": "white",
+      }
+    }
+    variant="raised"
+  >
+    Yes
+  </WithStyles(Button)>
+</div>
+`;

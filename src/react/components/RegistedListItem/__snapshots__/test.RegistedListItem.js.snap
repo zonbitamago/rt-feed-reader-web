@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistedListItem should 1`] = `
+<div
+  className="RegistedListItem"
+>
+  <WithStyles(ListItem)
+    component="a"
+  >
+    <WithStyles(ListItemText)
+      className="RegistedListItem-Text"
+      primary="test"
+    />
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(IconButton)
+        aria-label="Delete"
+      >
+        <pure(Delete)
+          onClick={[Function]}
+        />
+      </WithStyles(IconButton)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</div>
+`;

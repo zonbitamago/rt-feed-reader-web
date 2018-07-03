@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page should 1`] = `
+<div
+  className="Page"
+>
+  <Side
+    store={
+      Object {
+        "FeedListStore": Object {
+          "deleteFeedList": [Function],
+          "feedList": Array [
+            Object {
+              "name": "google",
+              "url": "https://www.google.co.jp/",
+            },
+            Object {
+              "name": "yahoo",
+              "url": "https://www.yahoo.co.jp/",
+            },
+          ],
+          "getFeedList": [Function],
+          "setFeedList": [Function],
+        },
+        "ItemStore": Object {
+          "add": [Function],
+          "getSettings": [Function],
+          "items": Array [],
+          "loading": false,
+          "setSetting": [Function],
+          "setTimer": [Function],
+          "timerId": "dummy",
+          "updateDate": "09:12:34",
+          "updateDuration": 5,
+        },
+      }
+    }
+  />
+  <Header
+    store={
+      Object {
+        "FeedListStore": Object {
+          "deleteFeedList": [Function],
+          "feedList": Array [
+            Object {
+              "name": "google",
+              "url": "https://www.google.co.jp/",
+            },
+            Object {
+              "name": "yahoo",
+              "url": "https://www.yahoo.co.jp/",
+            },
+          ],
+          "getFeedList": [Function],
+          "setFeedList": [Function],
+        },
+        "ItemStore": Object {
+          "add": [Function],
+          "getSettings": [Function],
+          "items": Array [],
+          "loading": false,
+          "setSetting": [Function],
+          "setTimer": [Function],
+          "timerId": "dummy",
+          "updateDate": "09:12:34",
+          "updateDuration": 5,
+        },
+      }
+    }
+  />
+  <div
+    className="main"
+  />
+</div>
+`;
