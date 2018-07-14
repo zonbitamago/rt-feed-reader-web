@@ -8,7 +8,7 @@ export default class feedParseUtil {
   // http://gigazine.net/news/rss_2.0/
   feedParse(url) {
     // 備忘：url.replace(/https?:\/\//, '')
-    // 以下利用
+    // (過去)以下利用
     // https://codetabs.com/cors-proxy/cors-proxy.html
     return axios({ method: "get", url:  constants.CORS_PROXY + url, timeout: 3000})
       .then(res => {
