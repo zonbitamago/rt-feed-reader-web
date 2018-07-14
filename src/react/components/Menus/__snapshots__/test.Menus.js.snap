@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menus should 1`] = `
+<div
+  className="Menus"
+>
+  <Icon>
+    <pure(PowerSettingsNew)
+      onClick={[Function]}
+    />
+  </Icon>
+  <Icon>
+    <pure(Refresh)
+      className=""
+      onClick={[Function]}
+    />
+  </Icon>
+  <Icon>
+    <pure(RssFeed)
+      onClick={[Function]}
+    />
+    <RegistedListModal
+      handleClose={[Function]}
+      open={false}
+      store={
+        Object {
+          "FeedListStore": Object {
+            "deleteFeedList": [Function],
+            "feedList": Array [
+              Object {
+                "name": "google",
+                "url": "https://www.google.co.jp/",
+              },
+              Object {
+                "name": "yahoo",
+                "url": "https://www.yahoo.co.jp/",
+              },
+            ],
+            "getFeedList": [Function],
+            "setFeedList": [Function],
+          },
+          "ItemStore": Object {
+            "add": [Function],
+            "getSettings": [Function],
+            "items": Array [],
+            "loading": false,
+            "setSetting": [Function],
+            "setTimer": [Function],
+            "timerId": "dummy",
+            "updateDate": "09:12:34",
+            "updateDuration": 5,
+          },
+        }
+      }
+    />
+  </Icon>
+  <Icon>
+    <pure(IndeterminateCheckBox)
+      onClick={[Function]}
+    />
+  </Icon>
+  <Icon>
+    <pure(Settings)
+      onClick={[Function]}
+    />
+    <SettingModal
+      handleClose={[Function]}
+      open={false}
+      store={
+        Object {
+          "FeedListStore": Object {
+            "deleteFeedList": [Function],
+            "feedList": Array [
+              Object {
+                "name": "google",
+                "url": "https://www.google.co.jp/",
+              },
+              Object {
+                "name": "yahoo",
+                "url": "https://www.yahoo.co.jp/",
+              },
+            ],
+            "getFeedList": [Function],
+            "setFeedList": [Function],
+          },
+          "ItemStore": Object {
+            "add": [Function],
+            "getSettings": [Function],
+            "items": Array [],
+            "loading": false,
+            "setSetting": [Function],
+            "setTimer": [Function],
+            "timerId": "dummy",
+            "updateDate": "09:12:34",
+            "updateDuration": 5,
+          },
+        }
+      }
+    />
+  </Icon>
+  <Icon>
+    <GoMarkGithub
+      onClick={[Function]}
+    />
+  </Icon>
+</div>
+`;

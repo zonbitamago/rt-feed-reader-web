@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="Header-Left"
+  >
+    <Icon>
+      <pure(Home)
+        onClick={[Function]}
+      />
+    </Icon>
+  </div>
+  <div
+    className="Header-Center"
+  >
+    <Icon>
+      <pure(RssFeed) />
+    </Icon>
+    <WithStyles(Typography)
+      color="inherit"
+      variant="subheading"
+    >
+      +
+    </WithStyles(Typography)>
+    <Icon>
+      <TiSocialTwitter />
+    </Icon>
+    <WithStyles(Typography)
+      color="inherit"
+      variant="subheading"
+    >
+      Feed
+    </WithStyles(Typography)>
+  </div>
+  <div
+    className="Header-Right"
+  >
+    <div>
+      update : 
+      09:12:34
+    </div>
+  </div>
+</div>
+`;

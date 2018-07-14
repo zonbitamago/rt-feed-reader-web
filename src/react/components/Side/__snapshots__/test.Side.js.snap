@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Side should 1`] = `
+<div
+  className="Side"
+>
+  <div
+    className="Side-Top"
+  >
+    <Menus />
+  </div>
+  <div
+    className="Side-Bottom"
+  >
+    <Time />
+  </div>
+</div>
+`;
