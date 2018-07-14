@@ -1,12 +1,16 @@
 import axios from "axios";
 import Feedparser from "feedparser";
 import stringToStream from "string-to-stream";
+import * as constants from "./constants";
 
 export default class feedParseUtil {
   feedparser = new Feedparser();
-
+  // http://gigazine.net/news/rss_2.0/
   feedParse(url) {
-    return axios({ method: "get", url: url, timeout: 3000 })
+    // 備忘：url.replace(/https?:\/\//, '')
+    // 以下利用
+    // https://codetabs.com/cors-proxy/cors-proxy.html
+    return axios({ method: "get", url:  constants.CORS_PROXY + url, timeout: 3000})
       .then(res => {
         stringToStream(res.data).pipe(this.feedparser);
       })
