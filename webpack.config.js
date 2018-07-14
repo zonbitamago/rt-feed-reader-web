@@ -7,6 +7,8 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.join(__dirname, "public")
   },
+
+
   optimization: {
     splitChunks: {
       name: "common",
