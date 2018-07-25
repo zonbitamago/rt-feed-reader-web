@@ -1,5 +1,6 @@
 import { action, observable } from "mobx";
 import moment from "moment";
+import feedParseUtil from "../util/feedParseUtil";
 import * as constants from "../util/constants";
 
 class ItemStore {
@@ -14,7 +15,91 @@ class ItemStore {
   timerId = "";
 
   @action.bound
-  add() {}
+  add() {
+    this.loading = true;
+    var urlList = JSON.parse(localStorage.getItem(constants.FEED_LIST));
+    if (urlList == undefined) {
+      return;
+    }
+    var promiseList = urlList.map(urlNode => {
+      var util = new feedParseUtil();
+      return util
+          .feedParse(urlNode.url)
+          .then(item => {
+            return item.map(node => {
+              node.name = urlNode.name;
+              node.created = node.pubdate
+                ? Date.parse(node.pubdate)
+                : Date.parse(node.updated);
+
+              var url = node.link;
+              if (
+                Object.prototype.toString.call(node.link) == "[object Array]"
+              ) {
+                url = node.link[0].href;
+              } else if (url.href != undefined) {
+                url = url.href;
+              }
+              node.url = url;
+
+              var domain = url.split("/")[2];
+              var favicon_url =
+                "http://www.google.com/s2/favicons?domain=" + domain;
+              // var favicon_url = "http://favicon.hatena.ne.jp/?url=http://" + domain;
+              node.src = favicon_url;
+
+              return node;
+            });
+          })
+          .catch(error => {
+            console.warn("error:" + urlNode.name);
+            console.warn(error);
+            return [];
+          });
+      // }
+    });
+
+    return Promise.all(promiseList).then(feedList => {
+      this.updateDate = moment().format("HH:mm:ss");
+
+      var dataList = [];
+      // 配列を一つにまとめる
+      feedList.map(feed => {
+        Array.prototype.push.apply(dataList, feed);
+      });
+
+      this.saveItems = dataList
+        .sort((val1, val2) => {
+          // 降順でならべかえ
+          var val1 = val1.created;
+          var val2 = val2.created;
+          if (val1 < val2) {
+            return 1;
+          } else {
+            return -1;
+          }
+        })
+        .map(data => {
+          return {
+            src: data.src,
+            alt: data.name,
+            domainName: data.name,
+            url: data.url,
+            itemName: data.title,
+            date: data.created
+          };
+        });
+
+      if (this.items.length == 0) {
+        this.items = this.saveItems;
+      }
+
+      this.hasUpdate =
+        JSON.stringify(this.items) != JSON.stringify(this.saveItems);
+
+      this.loading = false;
+    });
+  }
 
   @action.bound
   getSettings() {
