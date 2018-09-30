@@ -3,14 +3,14 @@ Web用RSS-Twitterクライアント
 ##### 本PRJは開発中です。
 
 ## Description
-Reactで作成されたWeb用RSS-Twitterクライアント。<br>
+Reactで作成されたWeb用RSS-Twitterクライアント。<br>
 読み込み可能な形式は以下の通り。
 - Rss
     - RSS1.0
     - RSS2.0
     - Atom
 - Twitter
-    - リスト
+    - リスト
 
 ## Demo
 <small>(ToDo)</small>
@@ -34,7 +34,7 @@ npm run test
 npm run storybook
 ```
 
-- コンポーネント用テンプレート作成
+- コンポーネント用テンプレート作成
 ```
 npm run cca
 ```
